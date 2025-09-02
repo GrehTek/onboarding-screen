@@ -1,7 +1,9 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react';
 import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import Card from '../components/Card2';
+
 
 const data = [
   {
@@ -56,7 +58,12 @@ export default function Screen2() {
         <Text style={styles.keepTrack}>Work like the {'\n'} best</Text>
         <Text style={styles.fadedText}>Discover proven tools from the people who master their craft</Text>
 
-        <Text style={{ marginTop: 20, marginBottom: 20 }}> o o <Text style={{ color: 'blue'}}>O</Text> o</Text>
+        <View style={styles.iconContainer}>
+          <Icon name='circle' size={10} color='gray' />
+          <Icon name='circle' size={10} color='gray' />
+          <Icon name='circle' size={10} color='black' />
+          <Icon name='circle' size={10} color='gray' />
+        </View>
 
         <TouchableOpacity>
           <LinearGradient
@@ -76,7 +83,7 @@ const styles = StyleSheet.create({
     paddingTop: 50,
   },
 
-  
+
   keepTrackContainer: {
     position: 'absolute',
     bottom: 90,
@@ -109,4 +116,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 22,
   },
+
+  iconContainer: {
+    marginTop: 20,
+    marginBottom: 20,
+    width: 70,
+    backgroundColor: 'silver',
+    padding: 6,
+    borderRadius: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  }
 })

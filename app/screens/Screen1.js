@@ -6,6 +6,7 @@ import {
   FlatList,
   StyleSheet, Text, TouchableOpacity, View
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import Card from './../components/Card';
 
 // const { height: screenHeight } = Dimensions.get('window');
@@ -15,7 +16,7 @@ const screenWidth = Dimensions.get('window').width;
 const fadeStartY = screenHeight * 0.35; // 40% of the screen height
 
 const data = [
-  { 
+  {
     id: '1',
     title: 'Framer',
     price: '$12',
@@ -23,7 +24,7 @@ const data = [
     ctaView: 'View',
     ctaRemind: 'Remind',
     ctaCancel: 'Cancel',
-    image : require('./../../assets/images/framer.png')
+    image: require('./../../assets/images/framer.png')
   },
   {
     id: '2',
@@ -33,7 +34,7 @@ const data = [
     ctaView: 'View',
     ctaRemind: 'Remind',
     ctaCancel: 'Cancel',
-    image : require('./../../assets/images/figma.png')
+    image: require('./../../assets/images/figma.png')
   },
   {
     id: '3',
@@ -43,7 +44,7 @@ const data = [
     ctaView: 'View',
     ctaRemind: 'Remind',
     ctaCancel: 'Cancel',
-    image : require('./../../assets/images/notion.png')
+    image: require('./../../assets/images/notion.png')
   },
   {
     id: '4',
@@ -53,7 +54,7 @@ const data = [
     ctaView: 'View',
     ctaRemind: 'Remind',
     ctaCancel: 'Cancel',
-    image : require('./../../assets/images/chatgpt.png')
+    image: require('./../../assets/images/chatgpt.png')
   },
   {
     id: '5',
@@ -63,7 +64,7 @@ const data = [
     ctaView: 'View',
     ctaRemind: 'Remind',
     ctaCancel: 'Cancel',
-    image : require('./../../assets/images/blender.png')
+    image: require('./../../assets/images/blender.png')
   },
 
 ]
@@ -138,7 +139,13 @@ export default function Index() {
         <Text style={styles.keepTrack}>Keep track of every subscription</Text>
         <Text style={styles.fadedText}>Stay on top of what you pay for</Text>
 
-        <Text style={{ marginTop: 20, marginBottom: 20 }}>o <Text style={{ color: 'black' }}>o</Text> o o</Text>
+        {/* <Text style={{ marginTop: 20, marginBottom: 20 }}>o <Text style={{ color: 'black' }}>o</Text> o o</Text> */}
+        <View style={styles.iconContainer}>
+          <Icon name='circle' size={10} color='gray' />
+          <Icon name='circle' size={10} color='black' />
+          <Icon name='circle' size={10} color='gray' />
+          <Icon name='circle' size={10} color='gray' />
+        </View>
 
         <TouchableOpacity>
           <LinearGradient
@@ -200,7 +207,21 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     fontSize: 22,
+  },
+
+  iconContainer: {
+    marginTop: 20,
+    marginBottom: 20,
+    width: 70,          
+    backgroundColor: 'silver',
+    padding: 6,
+    borderRadius: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   }
+
+
 });
 
 
