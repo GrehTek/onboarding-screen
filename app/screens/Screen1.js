@@ -139,7 +139,6 @@ export default function Index() {
         <Text style={styles.keepTrack}>Keep track of every subscription</Text>
         <Text style={styles.fadedText}>Stay on top of what you pay for</Text>
 
-        {/* <Text style={{ marginTop: 20, marginBottom: 20 }}>o <Text style={{ color: 'black' }}>o</Text> o o</Text> */}
         <View style={styles.iconContainer}>
           <Icon name='circle' size={10} color='gray' />
           <Icon name='circle' size={10} color='black' />
